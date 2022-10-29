@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+    <title>Custink</title>
+    
+</head>
+<body>
+    <!-- =====Header===== -->
+    <header class="py-6 shadow-sm bg-white">
+        <div class="container flex items-center justify-around">
+            <!-- ===Logo=== -->
+            <a href="#">
+                <img src="../images/logo.png" alt="logo_image" class="w-20 h-12">
+            </a>
+            <!-- ===Search Bar=== -->
+            <div class="flex w-full max-w-xl relative">
+                <span class="absolute left-4 top-3 text lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="w-full border border-indigo-500 border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none" placeholder="search">
+                <button class="bg-indigo-600 border border-indigo-500 text-white text- px-8 rounded-r-md hover:bg-slate-100 hover:text-indigo-600 transition">Search</button>
+            </div>
+            <!-- ===Icons=== -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-center text-fuchsia-600 hover:text-fuchsia-700 transition relative">
+                    <div class="text-2xl">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Wish List</div>
+                    <span class="absolute right-1 -top-1 w-4 h-4 rounded-full flex items-center justify-center bg-fuchsia-500 text-white text-xs">8</span>
+                </a>
+                <a href="#" class="text-center text-fuchsia-600 hover:text-fuchsia-700 transition relative">
+                    <div class="text-2xl">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="text-xs leading-3">Shopping</div>
+                    <span class="absolute right-2 -top-1 w-4 h-4 rounded-full flex items-center justify-center bg-fuchsia-500 text-white text-xs">3</span>
+                </a>
+                <a href="#" class="text-center text-fuchsia-600 hover:text-fuchsia-700 transition relative">
+                    <div class="text-2xl">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Account</div>
+                    <!-- <span class="absolute right-1 -top-1 w-4 h-4 rounded-full flex items-center justify-center bg-fuchsia-500 text-white text-xs"></span> -->
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <!-- =====Header End===== -->
+
+    <!-- =====Navbar===== -->
+    <nav class="bg-fuchsia-500">
+        <div class="container flex">
+            <div class="flex items-center justify-between flex-grow pl-12 cursor-pointer ">
+            <a href="#" class="text-gray-200 hover:text-white transition capitalize">Home</a>
+            <div class="relative group flex items-center space-x-6 py-4 px-8">
+                <a href="#" class="text-gray-200 hover:text-white transition capitalize">Create design</a>
+                    <!-- ===Sub-Navbar=== -->
+                    <div class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-800 divide-dashed hidden group-hover:block">
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-200 transition">
+                            <img src="../images/print_logo.png" alt="print_t_shirt_logo" class="h-5 w-5 object-contain">
+                            <span class="ml-3 text-gray-600 text-sm">Print</span>
+                        </a>
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-200 transition">
+                        <img src="../images/embroidary_logo.jpg" alt="embriodary_t_shirt_logo" class="h-5 w-5 object-contain">
+                        <span class="ml-3 text-gray-600 text-sm">Embroidary</span>
+                        </a>
+                    </div>
+                <!-- ===Sub-Navbar End=== -->
+            </div>
+            <div class="relative group flex items-center space-x-6 py-4 px-8">
+                <a href="#" class="text-gray-200 hover:text-white transition capitalize"> Products</a>
+                <!-- ===Sub-Navbar=== -->
+                <div class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-800 divide-dashed hidden group-hover:block">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-200 transition">
+                        <img src="../images/print_logo.png" alt="print_t_shirt_logo" class="h-5 w-5 object-contain">
+                        <span class="ml-2 text-gray-600 text-sm">Cloths</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-200 transition">
+                        <img src="../images/embroidary_logo.jpg" alt="embriodary_t_shirt_logo" class="h-5 w-5 object-contain">
+                        <span class="ml-2 text-gray-600 text-sm">Accessories</span> 
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-200 transition">
+                        <img src="../images/embroidary_logo.jpg" alt="embriodary_t_shirt_logo" class="h-5 w-5 object-contain">
+                        <span class="ml-2 text-gray-600 text-sm">Cards</span> 
+                    </a>
+                </div>
+                <!-- ===Sub-Navbar End=== -->
+            </div>
+            <a href="#" class="text-gray-200 hover:text-white transition capitalize">Gifts & Occasions</a>
+            <a href="#" class="text-gray-200 hover:text-white transition capitalize">business</a>
+            <a href="#" class="text-gray-200 hover:text-white transition capitalize">Popular</a>
+            <a href="#" class="text-gray-200 hover:text-white transition capitalize">Contact</a>
+
+        </div>
+        </div>
+    </nav>
+    <!-- =====Navbar End===== -->
+
+    <!-- =====Banner===== -->
+    <div class="bg-cover bg-no-repeat bg-center py-36" style="background-image: url(../images/banner02.jpg);">
+        <div class="container px-5">
+            <h1 class="text-6xl text-white mb-4 font-medium capitalize">Design your own cloths...</h1>
+            <p class="text-fuchsia-500">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br/> Corrupti, eos iure magnam neque quae impedit!
+            </p>
+            <div class="mt-12">
+                <a href="#" class="bg-fuchsia-500 border border-fuchsia-500 text-white px-6 py-3 rounded-md hover:bg-transparent hover:text-fuchsia-500 transition">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- =====Banner End===== -->
+    <!-- =====Feature===== -->
+    <div class="container py-16">
+        <div class="w-10/12 grid grid-cols-3 gap-6 mx-auto justify-center">
+            <!-- ===1st card === -->
+            <div class="border border-fuchsia-500 rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <i class="fas fa-light fa-cart-shopping fa-2xl text-fuchsia-500"></i>
+                <div>
+                    <h4 class="font-medium text-gray-700 capitalize text-lg">Money-back guarantee</h4>
+                    <p class="text-fuchsia-500 text-sm">You only pay if you like it.</p>
+                </div>
+            </div>
+
+            <!-- ===2nd card === -->
+            <div class="border border-fuchsia-500 rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <i class="fas fa-brands fa-creative-commons-sampling fa-2xl text-fuchsia-500"></i>
+                <div>
+                    <h4 class="font-medium text-gray-700 capitalize text-lg">Handmade</h4>
+                    <p class="text-fuchsia-500 text-sm">Design by professionals.</p>
+                </div>
+            </div>
+            <!-- ===3rd card === -->
+            <div class="border border-fuchsia-500 rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <i class="fas fa-regular fa-life-ring fa-2xl text-fuchsia-500"></i>
+                <div>
+                    <h4 class="font-medium text-gray-700 capitalize text-lg">24/7 Service</h4>
+                    <p class="text-fuchsia-500 text-sm">We provide you best service.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- =====Feature End===== -->
+
+    <!-- =====Categories===== -->
+    <div class="container pl-16 py-6">
+        <h2 class="text-3xl font-medium uppercase text-fuchsia-900 mb-6">Customization List</h2>
+        <div class="grid grid-cols-3 gap-3">
+            <!-- ===1st col category=== -->
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="../images/t_shirt.jpg" alt="category_img" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-medium group-hover:bg-opacity-30">T-Shirt</a>
+            </div>
+            <!-- ===2nd col category=== -->
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="../images/hoodies.webp" alt="category_img" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-medium group-hover:bg-opacity-30">Hoodies</a>
+            </div>
+            <!-- ===3rd col category=== -->
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="../images/w_hoddies.webp" alt="category_img" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-medium group-hover:bg-opacity-30">Women Hoodies</a>
+            </div>
+            <!-- ===1st col category=== -->
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="../images/sportswear.webp" alt="category_img" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-medium group-hover:bg-opacity-30">Shoprtswear</a>
+            </div>
+            <!-- ===2nd col category=== -->
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="../images/bag.jpeg" alt="category_img" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-medium group-hover:bg-opacity-30 contain">Bag</a>
+            </div>
+            <!-- ===3rd col category=== -->
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="../images/cap.jpg" alt="category_img" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-medium group-hover:bg-opacity-30">Cap</a>
+            </div>
+        </div>
+    </div>
+    <!-- =====Categories End===== -->
+
+    <!-- =====Top Choice===== -->
+    <div class="container pb-16 pl-16">
+        <div class="text-2xl uppercase font-medium mb-6 text-fuchsia-900">Our Best seeling Product</div>
+        <div class="grid grid-cols-4 gap-3">
+        <!-- ===1st product=== -->
+        <div class="bg-white shadow rounded overflow-hidden">
+            <!-- ===product image === -->
+            <div class="relative">
+                <img src="../images/product01.jpg" alt="product" class="w-full">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2">
+                    <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center hover:bg-fuchsia-900 transition">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center hover:bg-fuchsia-900 transition">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="pt-4 pb-3 px-4">
+                <a href="#">
+                    <h4 class="uppercase font-medium text-xl mb-2 text-fuchsia-500 hover:text-fuchsia-900 transition">T-shirt</h4>
+                </a>
+                <div class="flex items-baseline mb-1 space-x-2">
+                    <p class="text-sm text-fuchsia-500 font-semibold">$12.50</p>
+                    <p class="text-sm text-gray-400 line-through">$15.50</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex gap-1 text-sm text-yellow-400">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="text-xs text-gray-400 ml-3">(142)</div>
+                </div>
+            </div>
+            <a href="#" class="block w-full py-1 text-white bg-fuchsia-500 border border-fuchsia-500 rounded-b hover:bg-transparent hover:text-fuchsia-500">Add to card</a>
+        </div>
+
+        <!-- ===2nd product=== -->
+        <div class="bg-white shadow rounded overflow-hidden">
+            <!-- ===product image === -->
+            <div class="relative">
+                <img src="../images/product02.webp" alt="product" class="w-full">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2">
+                    <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center hover:bg-fuchsia-900 transition">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center hover:bg-fuchsia-900 transition">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="pt-4 pb-3 px-4">
+                <a href="#">
+                    <h4 class="uppercase font-medium text-xl mb-2 text-fuchsia-500 hover:text-fuchsia-900 transition">T-shirt</h4>
+                </a>
+                <div class="flex items-baseline mb-1 space-x-2">
+                    <p class="text-sm text-fuchsia-500 font-semibold">$12.50</p>
+                    <p class="text-sm text-gray-400 line-through">$15.50</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex gap-1 text-sm text-yellow-400">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="text-xs text-gray-400 ml-3">(142)</div>
+                </div>
+            </div>
+            <a href="#" class="block w-full py-1 text-white bg-fuchsia-500 border border-fuchsia-500 rounded-b hover:bg-transparent hover:text-fuchsia-500">Add to card</a>
+        </div>
+
+        <!-- ===3rd product=== -->
+        <div class="bg-white shadow rounded overflow-hidden">
+            <!-- ===product image === -->
+            <div class="relative">
+                <img src="../images/product03.jpg" alt="product" class="w-full">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2">
+                    <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center hover:bg-fuchsia-900 transition">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center hover:bg-fuchsia-900 transition">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="pt-4 pb-3 px-4">
+                <a href="#">
+                    <h4 class="uppercase font-medium text-xl mb-2 text-fuchsia-500 hover:text-fuchsia-900 transition">T-shirt</h4>
+                </a>
+                <div class="flex items-baseline mb-1 space-x-2">
+                    <p class="text-sm text-fuchsia-500 font-semibold">$12.50</p>
+                    <p class="text-sm text-gray-400 line-through">$15.50</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex gap-1 text-sm text-yellow-400">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="text-xs text-gray-400 ml-3">(142)</div>
+                </div>
+            </div>
+            <a href="#" class="block w-full py-1 text-white bg-fuchsia-500 border border-fuchsia-500 rounded-b hover:bg-transparent hover:text-fuchsia-500">Add to card</a>
+        </div>
+        <!-- ===4th product=== -->
+        <div class="bg-white shadow rounded overflow-hidden">
+            <!-- ===product image === -->
+            <div class="relative">
+                <img src="../images/product04.jpg" alt="product" class="w-full">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2">
+                    <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center hover:bg-fuchsia-900 transition">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center hover:bg-fuchsia-900 transition">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="pt-4 pb-3 px-4">
+                <a href="#">
+                    <h4 class="uppercase font-medium text-xl mb-2 text-fuchsia-500 hover:text-fuchsia-900 transition">T-shirt</h4>
+                </a>
+                <div class="flex items-baseline mb-1 space-x-2">
+                    <p class="text-sm text-fuchsia-500 font-semibold">$12.50</p>
+                    <p class="text-sm text-gray-400 line-through">$15.50</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex gap-1 text-sm text-yellow-400">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="text-xs text-gray-400 ml-3">(142)</div>
+                </div>
+            </div>
+            <a href="#" class="block w-full py-1 text-white bg-fuchsia-500 border border-fuchsia-500 rounded-b hover:bg-transparent hover:text-fuchsia-500">Add to card</a>
+        </div>
+    </div>
+    </div>    
+    <!-- =====Top choice End===== -->
+
+    <!-- =====Footer===== -->
+    <footer class="bg-white pt-16 pb-12 border-t border-fuchsia-200">
+        <div class="container grid grid-cols-4">
+            <!-- ===footer text === -->
+            <div class="col-span-1 space-y-8">
+                <img src="../images/logo.png" alt="logo" class="w-20">
+                <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Consequuntur, aperiam?</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+                <!-- ===footer links=== -->
+            <div class="col-span-2 grid grid-cols-2 gap-8">
+                <div class="grid gap-4">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">The Company</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">About Us</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">Bulk Order</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">Privacy</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">Terms & Condition</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">Press</a>
+                    </div>
+                </div>
+                <!-- === Services=== -->
+                <div class="grid gap-4">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Service</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">Your Order</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">Help</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">Contact</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">Address</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-gray-900 block">About Us</a>
+                    </div>
+                </div>
+            </div>
+            <!-- === Footer link ends=== -->
+            <!-- ===Message Option on -->
+            <div class="grid grid-cols-1 col-span-1 gap-4">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Send us mail</h3>
+                <textarea name="stext" id="stext" class="border border-fuchsia-300 bg-fuchsia-200 h-28 w-70 focus:outline-none text-fuchsia-900 p-2 font-medium rounded-md shadow-md" placeholder="Write something here..."></textarea>
+                <input type="email" class="border border-fuchsia-300 bg-fuchsia-200 w-70 mt-0 p-2 text-fuchsia-900 font-semibold focus:outline-none rounded-md shadow-md" placeholder="Email Addess...">
+                <input type="submit" name="submit" id="email" value="Send" class="w-40 border border-orange-700 bg-orange-600 text-white focus:outline-none cursor-pointer ml-40 text-center p-2 rounded-md">
+
+            </div>
+        </div>
+
+    </footer>    
+    <!-- =====Footer End===== -->  
+
+    <!-- =====Copyright===== -->
+    <div class="bg-gray-800 py-4">
+        <div class="flex items-center justify-center">
+            <p class="text-white">@copyright, All right reserved.</p>
+        </div>
+    </div>
+    <!-- =====Copyright End===== -->  
+    
+    
+</body>
+</html>
