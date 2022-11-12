@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+    <title>Sign In</title>
+</head>
+<body>
+    <section class="bg-fuchsia-50 min-h-screen flex items-center justify-center">
+        <!-- =====Login Container ===== -->
+        <div class="bg-fuchsia-100 flex rounded-2xl shadow-md max-w-3xl p-5">
+            <!-- ===content=== -->
+            <div class="sm:w-full px-12">
+                <h2 class="font-bold text-2xl text-fuchsia-900">Login</h2>
+                <p class="text-sm mt-4 text-fuchsia-900">If you are already a member, you can login.</p>
+                <form action="#" class="flex flex-col gap-4">
+                    <input type="text" class="p-2 mt-8 rounded-xl border focus:outline-none" name="email" id="email" placeholder="Email">
+                    <div class="relative">
+                        <input type="password" class="w-full p-2 mt-2 rounded-xl border focus:outline-none" name="password" id="password" placeholder="Password">
+                        <i class="fas fa-light fa-eye absolute right-2 top-1/2 -translate-y-1/2 p-2 text-gray-300"></i>
+                    </div>
+                    
+                    <button class="bg-fuchsia-900 rounded-xl text-white py-2 mt-4 font-bold shadow-md hover:bg-fuchsia-800 hover:scale-105 duration-300">Log in</button>
+                </form>
+                <div class="mt-4 grid grid-cols-3 items-center text-fuchsia-900">
+                    <hr class="border-fuchsia-900">
+                    <p class="text-center text-sm">OR</p>
+                    <hr class="border-fuchsia-900">
+                </div>
+                <button class="bg-white border py-2 w-full rounded-xl mt-4 text-gray-700 font-bold shadow-md">
+                    <i class="fas fa-brands fa-google text-sm mr-3  text-fuchsia-900"></i>
+                    Login with Google</button>
+                
+                <p class="text-xs py-4 border-b mt-3 border-fuchsia-600 text-fuchsia-900 font-bold"> <a href="#">Forgot your password!</a></p>
+                <div class="text-sm mt-4 flex justify-between items-center">
+                    <p class="text-fuchsia-700">Don't have any account...</p>
+                    <button class="py-1 text-sm px-5 bg-white border rounded-xl text-fuchsia-900 font-bold shadow-md"><a href="signup.html">Register</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
