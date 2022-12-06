@@ -1,7 +1,70 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 function SignUp() {
-  return (
+    const [input, setInput] = useState({
+        username: '',
+        password: '',
+        confirmPassword: ''
+      });
+     
+      const [error, setError] = useState({
+        username: '',
+        password: '',
+        confirmPassword: ''
+      })
+     
+      const onInputChange = e => {
+        const { name, value } = e.target;
+        setInput(prev => ({
+          ...prev,
+          [name]: value
+        }));
+        validateInput(e);
+      }
+     
+      const validateInput = e => {
+        let { name, value } = e.target;
+        setError(prev => {
+          const stateObj = { ...prev, [name]: "" };
+     
+          switch (name) {
+            case "username":
+              if (!value) {
+                stateObj[name] = "Please enter First name.";
+              }
+              break;
+              case "lname":
+                if (!value) {
+                  stateObj[name] = "Please enter Last name.";
+                }
+                break;
+       
+            case "password":
+              if (!value) {
+                stateObj[name] = "Please enter Password.";
+              } else if (input.confirmPassword && value !== input.confirmPassword) {
+                stateObj["confirmPassword"] = "Password and Confirm Password does not match.";
+              } else {
+                stateObj["confirmPassword"] = input.confirmPassword ? "" : error.confirmPassword;
+              }
+              break;
+     
+            case "confirmPassword":
+              if (!value) {
+                stateObj[name] = "Please enter Confirm Password.";
+              } else if (input.password && value !== input.password) {
+                stateObj[name] = "Password and Confirm Password does not match.";
+              }
+              break;
+     
+            default:
+              break;
+          }
+     
+          return stateObj;
+        });
+      }
+    return (
     <div>
       <section className="bg-fuchsia-50 min-h-screen flex items-center justify-center">
         {/* <!-- =====Login Container ===== --> */}
@@ -20,11 +83,13 @@ function SignUp() {
                     <div className="grid grid-cols-2 gap-2">
                         <div className="mt-4 flex flex-col">
                             <label for="fname" className="text-xs mb-1 ml-1 text-fuchsia-800">First Name</label>
-                            <input type="text" className="p-2 rounded-xl border text-sm focus:outline-none" name="fname" id="fname" placeholder="Enter your first name..." />
+                            <input type="text" className="p-2 rounded-xl border text-sm focus:outline-none" name="username" id="fname" placeholder="Enter your first name..." value={input.username} onChange={onInputChange} onBlur={validateInput}/>
+                            {error.username && <span className='err'>{error.username}</span>}
                         </div>
                         <div className="mt-4 flex flex-col">
                             <label for="lname" className="text-xs mb-1 ml-1 text-fuchsia-800">Last Name</label>
-                            <input type="text" className="p-2 rounded-xl border text-sm focus:outline-none" name="lname" id="lname" placeholder="Enter your last name..." />
+                            <input type="text" className="p-2 rounded-xl border text-sm focus:outline-none" name="lname" id="lname" placeholder="Enter your last name..." value={input.lname} onChange={onInputChange} onBlur={validateInput}/>
+                            {error.lname && <span className='err'>{error.lname}</span>}
                         </div>
                     </div>
                     {/* <!-- 2nd row --> */}
@@ -38,11 +103,13 @@ function SignUp() {
                     <div className="grid grid-cols-2 gap-2">
                         <div className="mt-4 flex flex-col">
                             <label for="password" className="text-xs mb-1 ml-1 text-fuchsia-800">Passwrod</label>
-                            <input type="password" className="p-2 rounded-xl border text-sm focus:outline-none" name="password" id="password" placeholder="Enter your password..." />
+                            <input type="password" className="p-2 rounded-xl border text-sm focus:outline-none" name="password" id="password" placeholder="Enter your password..." value={input.password} onChange={onInputChange} onBlur={validateInput}/>
+                            {error.password && <span className='err'>{error.password}</span>}
                         </div>
                         <div className="mt-4 flex flex-col">
-                            <label for="cpassword" className="text-xs mb-1 ml-1 text-fuchsia-800">Confirm password</label>
-                            <input type="password" className="p-2 rounded-xl border text-sm focus:outline-none" name="cpassword" id="cpassword" placeholder="confirm password..." />
+                            <label for="confirmPassword" className="text-xs mb-1 ml-1 text-fuchsia-800">Confirm password</label>
+                            <input type="password" className="p-2 rounded-xl border text-sm focus:outline-none" name="confirmPassword" id="confirmPassword" placeholder="confirm password..." value={input.confirmPassword} onChange={onInputChange} onBlur={validateInput}/>
+                            {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
                         </div>
                     </div>
                     {/* <!-- 4th row --> */}

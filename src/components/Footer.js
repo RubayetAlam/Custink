@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { validator } from 'validator'
 import logo from '../assets/logo.png'
 const Footer = () => {
-  return (
+    const [emailError, setEmailError] = useState('')
+    const validateEmail = (e) => {
+      var email = e.target.value
+    
+      if (validator.isEmail(email)) {
+        setEmailError('')
+      } else {
+        setEmailError('Please enter valid Email!')
+      }
+    }
+    return (
     <div>
       <footer className="bg-white pt-16 pb-12 pl-8 border-t border-fuchsia-200">
         <div className="container grid grid-cols-4">
@@ -54,8 +65,9 @@ const Footer = () => {
             <div className="grid grid-cols-1 col-span-1 gap-4">
                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Send us mail</h3>
                 <textarea name="stext" id="stext" className="border border-fuchsia-300 bg-fuchsia-200 h-28 w-70 focus:outline-none text-fuchsia-900 p-2 font-medium rounded-md shadow-md" placeholder="Write something here..."></textarea>
-                <input type="email" className="border border-fuchsia-300 bg-fuchsia-200 w-70 mt-0 p-2 text-fuchsia-900 font-semibold focus:outline-none rounded-md shadow-md" placeholder="Email Addess..." />
-                <input type="submit" name="submit" id="email" value="Send" className="w-40 border border-orange-700 bg-orange-600 text-white focus:outline-none cursor-pointer ml-40 text-center p-2 rounded-md" />
+                <input type="email" className="border border-fuchsia-300 bg-fuchsia-200 w-70 mt-0 p-2 text-fuchsia-900 font-semibold focus:outline-none rounded-md shadow-md" placeholder="Email Addess..." onChange={(e)=>validateEmail(e)} />
+                <span className='text-red-400 font-bold'>{emailError}</span>
+                <input type="submit" name="submit" id="email" value="Send" className="w-40 border border-orange-700 bg-orange-600 text-white focus:outline-none cursor-pointer ml-40 text-center p-2 rounded-md"  />
 
             </div>
             

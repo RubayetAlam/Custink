@@ -1,7 +1,48 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import Image1 from '../assets/Product/product01.jpg'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import Image1 from '../assets/Product/product01.jpg';
 function ProductDetials() {
+    //increment decrement count
+    const [count,setCount]=useState(0);
+    const incCount=()=>{
+        setCount(count+1);
+    }
+    const decCount=()=>{
+        if(count>0){
+        setCount(count-1);
+        }
+    }
+
+    // file upload
+    const [selectedFile, setSelectedFile] = useState();
+	const [isSelected, setIsSelected] = useState(false);
+
+	const changeHandler = (event) => {
+		setSelectedFile(event.target.files[0]);
+		setIsSelected(true);
+	};
+
+	const handleSubmission = () => {
+		const formData = new FormData();
+
+		formData.append('File', selectedFile);
+
+		fetch(
+			'http://localhost:3000/productcards',
+			{
+				method: 'POST',
+				body: formData,
+			}
+		)
+			.then((response) => response.json())
+			.then((result) => {
+				console.log('Success:', result);
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+			});
+	};
+
   return (
     <div className='container mx-auto mt-8'>
     {/* ----------Heading section------ */}
@@ -38,9 +79,9 @@ function ProductDetials() {
               <span className='text-slate-400 text-sm font-bold'>10% discount in 5 items</span>
             </div>
             <div className='grid grid-cols-3'>
-              <button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500'>-</button>
-              <input type='text' className='text-center font-bold px-6 py-3 border-2 border-slate-300 hover:border-slate-500' value='0'/>
-              <button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500'>+</button>
+              <button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500' onClick={decCount}>-</button>
+              <input type='text' className='text-center font-bold px-6 py-3 border-2 border-slate-300 hover:border-slate-500' value={count}/>
+              <button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500' onClick={incCount}>+</button>
             </div>
         </div>
         <div className='mt-12'>
@@ -62,13 +103,17 @@ function ProductDetials() {
         </div>
         <div className='my-10'>
           <h1 className='mb-4'>Media-</h1>
-          <button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500 hover:bg-slate-200 mr-8'>Upload a file</button>
-          {/* <input
-      type="file"
-      ref={hiddenFileInput}
-      onChange={handleChange}
-      style={{display: 'none'}} 
-    /> */}
+          <input type="file" name="file" onChange={changeHandler}/>
+			{isSelected ? (
+				<div>
+					<p>{selectedFile.name}</p>
+				</div>
+			) : (
+				<span></span>
+			)}
+			<div>
+				<button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500 hover:bg-slate-200 mr-8' onClick={handleSubmission}>Submit File</button>
+			</div>
           <button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500 hover:bg-slate-200 mr-8'>Add text</button>
           <button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500 hover:bg-slate-200 mr-8'>Add Quick Design</button>
           <button type='button' className='px-6 py-3 font-bold border-2 border-slate-300 hover:border-slate-500 hover:bg-slate-200 mr-8 my-6'>Import image</button>
