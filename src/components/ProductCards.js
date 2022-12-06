@@ -1,12 +1,28 @@
 import React from 'react'
-import Image1 from '../assets/Product/product01.jpg'
+import Footer from './/Footer'
+import Copyrights from './Copyrights'
+import Heading from './Heading'
+import Navbar from './Navbar'
+
+import ProductDetials from './ProductDetials'
 function ProductCards() {
   return (
-    <div className='row'>
-      <div className='col-12'>
-        <img src={Image1} alt=""/>
+    <div>
+      <div>
+        <Heading />
       </div>
-      <div></div>
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <ProductDetials/>
+      </div>
+      <div>
+        <Footer />
+      </div>
+      <div>
+          <Copyrights />
+      </div>
     </div>
   )
 }

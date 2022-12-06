@@ -1,13 +1,13 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import About from './components/About'
+import ContactPage from './components/ContactPage'
+import Error from './components/Error'
 import Home from './components/Home'
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import ProductCards from './components/ProductCards'
 import ProductPage from './components/ProductPage'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
-import Error from './components/Error'
-import About from './components/About'
-import ProductCards from './components/ProductCards'
-import ContactPage from './components/ContactPage'
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
-import {NavLink} from 'react-router-dom'
 const Footer = () => {
   return (
     <div>
@@ -43,7 +43,7 @@ const Footer = () => {
                     <div className="mt-4 space-y-4">
                         <NavLink to="/about" className="text-base text-gray-400 hover:text-gray-900 block">Your Order</NavLink>
                         <NavLink to="/about" className="text-base text-gray-400 hover:text-gray-900 block">Help</NavLink>
-                        <NavLink to="/contact" className="text-base text-gray-400 hover:text-gray-900 block">Contact</NavLink>
+                        <NavLink to="/ContactPage" className="text-base text-gray-400 hover:text-gray-900 block">Contact</NavLink>
                         <NavLink to="/about" className="text-base text-gray-400 hover:text-gray-900 block">Address</NavLink>
                         <navLink to="/about" className="text-base text-gray-400 hover:text-gray-900 block">About Us</navLink>
                     </div>
